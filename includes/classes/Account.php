@@ -5,7 +5,7 @@
 		protected PDO $con;
 
 		public function __construct() {
-			$this->con=connexionBD::getInstance();
+			$this->con=ConnexionBD::getInstance();
 			$this->errorArray = array();
 		}
 
