@@ -158,6 +158,6 @@
      </div>
  </div>
 
- <script src="navBar.js"></script>
+ <script src="assets/js/navBar.js"></script>
 </body>
 </html>
