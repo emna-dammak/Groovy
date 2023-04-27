@@ -2,9 +2,10 @@
 	class Account {
 
 		public $errorArray;
+		protected PDO $con;
 
-		public function __construct($con) {
-			$this->con=$con;
+		public function __construct() {
+			$this->con=connexionBD::getInstance();
 			$this->errorArray = array();
 		}
 
