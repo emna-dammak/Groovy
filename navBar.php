@@ -11,7 +11,7 @@
         <div class="titreNavBar">
 
             <div class="titre">
-                <img class="logo" src="assets/icons/logo.png">
+                <img class="logo" src="assets/icons/logo.svg">
                 <div class="roovy">ROOVY</div>
             </div>
 
