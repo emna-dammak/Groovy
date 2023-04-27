@@ -1,12 +1,10 @@
 <?php
-ob_start();
-session_start();
 
-$timezone = date_default_timezone_set("Africa/Tunis");
+include_once 'autoload.php';
 
-$con = mysqli_connect("localhost", "root", "", "Groovy");
+$timezone=date_default_timezone_set("Africa/Tunis");
 
-if(mysqli_connect_errno()) {
-    echo "Failed to connect: " . mysqli_connect_errno();
-}
+$account=new Account();
+
+
 ?>

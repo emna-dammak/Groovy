@@ -39,6 +39,9 @@ html, body {
     background: #FFFFFF;
     border-bottom-right-radius: 20px ;
     border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #inputContainer h2 {
@@ -50,7 +53,9 @@ html, body {
     /* identical to box height */
     color: #000000;
 }
-
+form{
+    width: 80%;
+}
 #inputContainer input[type="text"],
 #inputContainer input[type="password"],
 #inputContainer input[type="email"]{
@@ -81,7 +86,6 @@ input:focus::before {
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
-    /* identical to box height */
     color: #505050;
     margin-left: 20px;
 
@@ -129,9 +133,80 @@ hr{
     place-items: center;
 }
 .info{
-    width: 442px;
-    height: 433px;
+    width: 60% ;
+    height: 60% ;
     background: rgba(255, 255, 255, 0.31);
     backdrop-filter: blur(13px);
     border-radius: 30px;
+
+    padding:67px 20px 0px 20px;
+
+
 }
+.feature{
+    position: absolute;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+img {
+    align-self: center;
+    height: 100px;
+    width: 100px;
+
+
+}
+.info h1{
+    width: 367px;
+    height: 60px;
+
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #3A4F7A;
+
+
+}
+.info p{
+    width: 78%;
+    height: 28%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #3A4F7A;
+
+    opacity: 0.56;
+}
+.info h2{
+    width: 177px;
+    height: 36px;
+    left: 977px;
+    top: 706px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+
+    color: #3A4F7A;
+
+}
+
