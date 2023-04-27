@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/navigationBar.iml" filepath="$PROJECT_DIR$/.idea/navigationBar.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/Groovy.iml" filepath="$PROJECT_DIR$/.idea/Groovy.iml" />
+>>>>>>> f9685a9ddcbafac82913f9ff3414ae93e9bc0012
     </modules>
   </component>
 </project>

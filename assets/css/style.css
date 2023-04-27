@@ -1,0 +1,488 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+}
+
+#navBarContainer {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 21.944%;
+    height: 89.479%;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(173.82deg, #EAF1FF 0%, rgba(234, 241, 255, 0.37) 100%);
+    border-right: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 0 20px 20px 0;
+}
+.titreNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*padding: 50px 65px;*/
+    gap: 1%;
+
+    position: absolute;
+    width: 100%;
+    height: 11.33698%;
+    left: 0;
+    top: 0;
+}
+.titre {
+    width: 43.512%;
+    height: 34.5139%;
+
+
+    /* Inside auto layout
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;*/
+}
+.roovy {
+    position: absolute;
+    width: 32.27848%;
+    height: 34.5139%;
+    left: 39.4778%;
+    top: 32.747%;
+
+    font-family: 'Mortend' , sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 125%;
+    line-height: 116.5139%;
+    /* identical to box height */
+
+
+    color: #3A4F7A;
+}
+.logo {
+    position: absolute;
+    width: 11.0759%;
+    height: 28.76%;
+    left: 28.2436%;
+    top: 36.0341%;
+}
+
+.contenuNavBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 2.8125%;
+
+    position: absolute;
+    width: 75%;
+    height: 50.3119%;
+    left: 6.9620%;
+    top: 14.0628%;
+}
+.groupMenu {
+    width: 100%;
+    height: 46.758985%;
+
+
+     /*Inside auto layout*/
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.groupPlaylist {
+    height: 16.9565%;
+    width: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.groupSettings {
+    height: 34.17%;
+    width: 100%;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+.groupMenu .menu {
+    position: absolute;
+    width: 20.51282%;
+    height: 7.7075%;
+    left: 0;
+    top: 0;
+
+
+
+}
+.grandText {
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 125%;
+    line-height: 100%;
+    /* identical to box height */
+
+
+    color: #586175;
+}
+.groupMenu .menuTools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 2.747%;
+
+    position: absolute;
+    width: 100%;
+    height: 36.48228%;
+    left: 6.2271%;
+    top: 10.2767%;
+
+}
+.menuTools:hover{
+    cursor:pointer ;
+
+}
+
+.settingsTools:hover{
+    cursor:pointer ;
+
+}
+
+.browse:hover .text {
+   color:white;
+}
+.browse:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.library:hover .text {
+    color:white;
+}
+.library:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.username:hover .text {
+    color:white;
+}
+.username:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.search:hover .text {
+    color:white;
+}
+.search:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.logout:hover .text {
+    color:white;
+}
+.logout:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.browse:hover, .search:hover,.library:hover,.username:hover, .logout:hover {
+    background: #E98EAD;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.createYourPlaylist:hover .text{
+    color: #E98EAD;
+    cursor:pointer ;
+}
+
+.groupMenu .menuTools .browse ,
+.groupMenu .menuTools .search,
+.groupMenu .menuTools .library{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /*padding: 10px 163px 10px 15px;*/
+
+    gap: 7.04225%;
+
+    width: 100%;
+    height: 30.98%;
+
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    /*flex: none;
+
+    flex-grow: 0;*/
+}
+.text {
+    width: 22.3443%;
+    height: 54.54545%;
+
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100%;
+    line-height: 100%;
+    /* identical to box height */
+
+
+    color: #505050;
+
+
+    /* Inside auto layout
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;*/
+}
+.icon{
+    width: 8.7912%;
+    height: 54.54545%;
+
+
+    /* Inside auto layout
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;*/
+}
+.groupPlaylist .playlist {
+    position: absolute;
+    width: 39.12454%;
+    height: 7.7075%;
+    left: 0;
+    top: 49.69%;
+}
+.groupPlaylist .createYourPlaylist {
+    position: absolute;
+    width: 100%;
+    height: 6.67985%;
+    left: 5.8608%;
+    top: 58.97245%;
+
+}
+.settings {
+    position: absolute;
+    width: 43.036%;
+    height: 8.707%;
+    left: 0;
+    top: 69.58908%;
+}
+.settingsTools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1.8315%;
+    position: absolute;
+    width: 100%;
+    height: 23.89332%;
+    left: 6.2271%;
+    top: 79.8657%;
+}
+.username {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /*padding: 10px 138px 10px 15px;*/
+    gap: 7.04225%;
+
+    width: 100%;
+    height: 47.3118%;
+
+    border-radius: 5px;
+}
+.logout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /*padding: 10px 167px 10px 15px;*/
+    gap: 7.04225%;
+
+    width: 100%;
+    height: 47.3118%;
+
+    border-radius: 5px;
+}
+
+
+
+
+
+
+#nowPlayingBarContainer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
+    height: 100px;
+
+    background: rgba(69, 69, 69, 0.36);
+    backdrop-filter: blur(25px);
+    /* Note: backdrop-filter has minimal browser support */
+    mix-blend-mode: multiply;
+
+
+}
+
+
+.maskImage{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
+    height: 100px;
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png);
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+
+#nowPlayingBar {
+    display: flex;
+    height: 90px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+#nowPlayingLeft,
+#nowPlayingRight{
+    width: 30%;
+    min-width: 100px;
+}
+#nowPlayingRight {
+    position: relative;
+    margin-top: 10px;
+}
+#nowPlayingCenter{
+    width: 40%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nowPlayingBar .content {
+    width: 100%;
+    height: 57px;
+}
+.playerControls .buttons {
+    margin: 8px auto;
+    display: table;
+}
+.controlButton {
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+    width:50px;
+}
+.controlButton img {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+}
+.controlButton.play img,
+.controlButton.pause img {
+    width: 24px;
+    height: 24px;
+}
+.controlButton:hover {
+    cursor:pointer ;
+}
+.progressTime {
+    min-width: 40px;
+    text-align: center;
+
+    font-family: 'Poppins' ,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 10px;
+    /* identical to box height */
+    color: #F2F2F2;
+}
+.playbackBar{
+    display: flex;
+}
+.progressBar {
+    width: 100%;
+    height: 12px;
+    display: inline-flex;
+    cursor: pointer;
+}
+.progressBarBg{
+    background-color: #404040;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+.progress{
+    background-color: #F2F2F2;
+    height: 4px;
+    width: 50%;
+    border-radius: 2px;
+}
+.playbackBar .progressBar{
+    margin-top: 3px;
+}
+#nowPlayingLeft .albumArtwork {
+    height: 100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size: cover;
+    background: url(https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png);
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+}
+.trackInfo {
+    display: table;
+}
+#nowPlayingLeft .trackInfo .trackName {
+    margin: 6px 0;
+    display: inline-block;
+    width: 100%;
+
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+#nowPlayingLeft .trackInfo .artistName  {
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: rgba(255, 221, 233, 0.74);
+
+}
+.volumeBar {
+    width: 180px;
+    position: absolute;
+    right: 0;
+}
+.volumeBar .progressBar {
+    width: 125px;
+}
+.menuTools div{
+    
+}
