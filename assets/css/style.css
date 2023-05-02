@@ -10,6 +10,70 @@ html, body {
 
     background: #FFFFFF;
 }
+.square .leftSection {
+    width: 80%;
+    float: left;
+    max-width: 250px;
+    position: relative;
+
+}
+
+.square .leftSection img {
+    height: 180px;
+    width: 180px;
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+ 
+}
+.square .leftSection img:hover {
+
+    transform: scale(1.05);
+            transition: transform 0.2s ease-in-out; 
+}
+
+.square .rightSection {
+    width: 70%;
+    float: left;
+    padding: 20px 10px 5px 40px;
+    box-sizing: border-box;
+}
+
+.square .rightSection h2 {
+    font-family: 'Calibri light';
+    font-size: 120%;
+    color: #5952a0;
+    margin-top: 0px;
+    position: absolute;
+    top: 40%;
+    left: 3.5%;
+}
+
+.square .rightSection h1 {
+    font-family: 'calibri light';
+    color: #8C9DBE;
+    margin-top: 0px;
+    position: absolute;
+    top: 45%;
+    left: 3.5%;
+    font-size: 100%;
+}
+
+.square .rightSection h0 {
+    font-family: 'calibri light';
+    color: #262252;
+    margin-top: 0px;
+    position: absolute;
+    top: 45%;
+    left: 6.2%;
+}
+
+.square .rightSection p {
+    color: #939393;
+    font-weight: 200;
+}
 
 #navBarContainer {
     box-sizing: border-box;
