@@ -26,7 +26,7 @@ $artistRepo=new ArtistRepository();
                 <a href='album.php?id=".$album->id."'>
                 <div class='imageContent'>
                 <img src='assets/icons/Glogo.svg' id='Glogo'>
-                <img src='" . $album->artworkPath ."' id='AlbumImg'></div>                                
+                <img src='" . $album->artworkPath ."' id='AlbumImg'></div>
                 <div class='gridViewInfo' >
                 <div class='albumName'>".$album->title." </div>
                 <div class='artistName'>".$artistRepo->findById($album->artist)->name."</div>
@@ -51,3 +51,4 @@ $artistRepo=new ArtistRepository();
     </div>
 
 <?php include("includes/footer.php"); ?>
+
