@@ -1,8 +1,9 @@
 
 <?php
 $name='album';
-include("includes/header.php");
-include_once("includes/autoload.php");
+include_once "includes/autoload.php";
+include_once("includes/includedFiles.php");
+
 $artistRepo=new ArtistRepository();
 $albumRepo=new AlbumRepository();
 if(isset($_GET['id']))
@@ -19,8 +20,11 @@ $artist=$album->getArtist();
 <div class="square">
          <div class="col1">
             <div class="leftSection">
-
+                <img src='assets/icons/Glogo.svg' id='Glogo'>
                 <img src='<?=$album->getArtworkPath()?>' alt='Example image'>
+                <button class="player">
+                    <img src='assets/icons/play.svg' class='play-b'>
+                </button>
 
             </div>
             <div class="rightSection">
@@ -28,7 +32,7 @@ $artist=$album->getArtist();
                 <h2><?=$album->getTitle()?></h2>
 
                 <h1>By </h1>
-                <h0><?=$artist->getName();?></h0>
+                <h0 onclick="openPage('artist.php?id=<?=$artist->getId()?>')"><?=$artist->getName();?></h0>
 
             </div>
             <hr>
@@ -37,14 +41,15 @@ $artist=$album->getArtist();
                 <p class="bottomLeft bold"><?=$album->getNumberOfSongs()?></p>
                 <p class="bottomRight"><span class="bold">45</span><span>min</span></p>
             </div>
-             <br>
             <div class="bottomSection1">
 
                 <p class="bottomLeft">Songs</p>
                 <p class="bottomRight">Playtime</p>
             </div>
 		</div>
-		<div class="col2">
+
+
+        <div class="col2">
             <div class="top">
                     <div class="columnn1">#</div>
                     <div class="columnn2 ">Title</div>
@@ -65,20 +70,15 @@ $artist=$album->getArtist();
                         <div class='columnn2'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getDuration() . "</div>
                         <div class='more'><img  src='assets/icons/more.svg' alt=''></div>
-                    </div>
+                </div>
 
                  ";
                 $i+=1;} ?>
-                 </div>
-
-		</div>
+        </div>
     </div>
 
 
 
 
 
-
-
-<?php include("includes/footer.php");?>
 

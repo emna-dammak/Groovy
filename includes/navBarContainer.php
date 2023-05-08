@@ -1,6 +1,6 @@
 <div id="navBarContainer">
     <div class="titreNavBar">
-        <div class="titre">
+        <div class="titre" onclick="openPage('index.php')">
             <img class="logo" src="assets/icons/logo.svg">
             <div class="roovy">ROOVY</div>
         </div>
@@ -9,7 +9,7 @@
         <div class="groupMenu">
             <span class="grandText">Menu</span>
             <div class="menuTools">
-                <div class="browse">
+                <div class="browse" onclick="openPage('browse.php')">
                     <img src="assets/icons/browse.svg" alt="" class="icon">
                     <span class="text">Browse</span>
                 </div>

@@ -18,21 +18,30 @@ class Artist
         $this->con = ConnexionBD::getInstance();
         $this->id = $id;
         $this->artistRepo=new ArtistRepository();
+        $artist=$this->artistRepo->findById($this->id);
+        $this->artworkPath = $artist->artworkPath;
     }
 
     public function getName()
     {
-        $name=$this->artistRepo->getName($this->id);
-        return $name;
+        $artist=$this->artistRepo->findById($this->id);
+        return $artist->name;
     }
+
     public function getId()
     {
         return $this->id;
     }
-public function getSongIds()
-{
-    $songIdArray=$this->artistRepo->getSongIds();
-    return $songIdArray;
 
-}
+    public function getSongIds()
+    {
+        $songIdArray=$this->artistRepo->getSongIds($this->id);
+        return $songIdArray;
+
+    }
+
+    public function getArtworkPath() {
+        return $this->artworkPath;
+    }
+
 }
