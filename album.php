@@ -1,9 +1,6 @@
 
 <?php
-$name='album';
-include_once "includes/autoload.php";
-include_once("includes/includedFiles.php");
-
+include "includes/includedFiles.php";
 $artistRepo=new ArtistRepository();
 $albumRepo=new AlbumRepository();
 if(isset($_GET['id']))
@@ -48,34 +45,41 @@ $artist=$album->getArtist();
             </div>
 		</div>
 
-
-        <div class="col2">
-            <div class="top">
-                    <div class="columnn1">#</div>
-                    <div class="columnn2 ">Title</div>
-                    <div class="columnn3" ">Duration</div>
-                    <div class="more"></div>
-            </div>
-            <div class='AlbumtracklistContainer'>
-                <?php
-                $i=1;
-                $songIdArray=$album->getSongIds();
-                foreach($songIdArray as $songId)
-                {
-                    $song=new Song($songId);
-                    $artistSong=$song->getArtist();
-                echo "
+    <div class="col2">
+        <div class="top">
+            <div class="columnn1">#</div>
+            <div class="columnn2 ">Title</div>
+            <div class="columnn3" ">Duration</div>
+        <div class="more"></div>
+    </div>
+    <div class='AlbumtracklistContainer'>
+        <?php
+        $i=1;
+        $songIdArray=$album->getSongIds();
+        foreach($songIdArray as $songId)
+        {
+            $song=new Song($songId);
+            $artistSong=$song->getArtist();
+            echo "
                <div class='tracklistRow'>
                         <div class='columnn1'>" . $i . "</div>
                         <div class='columnn2'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getDuration() . "</div>
-                        <div class='more'><img  src='assets/icons/more.svg' alt=''></div>
-                </div>
+                       
+                        <div class='more'>
+                         <input type='hidden' class='songId' value='".$album->getId()."'>
+                        <img  src='assets/icons/more.svg' alt='' class='moreImg' onclick='showOptionsMenu(this)'></div>
+                    </div>
 
                  ";
-                $i+=1;} ?>
-        </div>
+            $i+=1;} ?>
     </div>
+    </div>
+</div>
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?=Playlist::getPlaylistDropdown($con,$username);?>
+</nav>
 
 
 

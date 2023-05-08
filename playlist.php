@@ -1,7 +1,5 @@
 <?php
-$name='album';
-include("includes/header.php");
-include_once("includes/autoload.php");
+include("includes/includedFiles.php");
 $artistRepo=new ArtistRepository();
 $albumRepo=new AlbumRepository();
 $playlistRepo=new playlistRepository();
@@ -13,16 +11,15 @@ else
 {
     header("Location:index.php");
 }
-$data=1;
-$data=$playlistRepo->findById($data);
+
 $playlist=new Playlist($playlistId);
 $owner=new User($playlist->getOwner());
 ?>
-    <div class="square">
+<div class="square">
     <div class="col1">
         <div class="leftSection">
 
-            <img src='assets/icons/cover.svg' alt='playlist'>
+            <img src='' alt='Example image'>
 
         </div>
         <div class="rightSection">
@@ -32,7 +29,6 @@ $owner=new User($playlist->getOwner());
             <h1>By </h1>
             <h0><?=$playlist->getOwner();?></h0>
             <button class="buttonDelete" onclick="deletePlaylist('<?php echo $playlistId; ?>')" >DELETE PLAYLIST</button>
-
         </div>
         <hr>
         <div class="bottomSection">
@@ -46,23 +42,23 @@ $owner=new User($playlist->getOwner());
             <p class="bottomRight">Playtime</p>
         </div>
     </div>
+
     <div class="col2">
         <div class="top">
             <div class="columnn1">#</div>
-            <div class="columnn2">Title</div>
-            <div class="columnn3">Duration</div>
-            <div class="more"></div>
-        </div>
-        <div class='AlbumtracklistContainer'>
-            <?php
-            $i=1;
-            $songIdArray=$playlist->getSongIds();
-            foreach($songIdArray as $songId)
-            {
-                $song=new Song($songId);
-                $artistSong=$song->getArtist();
-
-                echo "
+            <div class="columnn2 ">Title</div>
+            <div class="columnn3" ">Duration</div>
+        <div class="more"></div>
+    </div>
+    <div class='AlbumtracklistContainer'>
+        <?php
+        $i=1;
+        $songIdArray=$playlist->getSongIds();
+        foreach($songIdArray as $songId)
+        {
+            $playlistSong=new Song($songId);
+            $artistSong=$playlistSong->getArtist();
+            echo "
                <div class='tracklistRow'>
                         <div class='columnn1'>" . $i . "</div>
                         <div class='columnn2'>" . $playlistSong->getTitle() . "</div>
@@ -74,15 +70,19 @@ $owner=new User($playlist->getOwner());
                     </div>
 
                  ";
-                $i+=1;} ?>
-
-
-        </div>
+            $i+=1;} ?>
     </div>
+</div>
+</div>
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?=Playlist::getPlaylistDropdown($con,$username)?>
+    <div class="item" onclick="removeFromPlaylist(this,'<?=$playlistId?>')">Remove Song</div>
+
+</nav>
 
 
 
 
 
 
-<?php include("includes/footer.php");?>

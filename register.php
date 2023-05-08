@@ -1,8 +1,5 @@
 <?php
-
 include_once "includes/autoload.php";
-
-
 include_once ("includes/config.php");
 include_once ("includes/handlers/login-handler.php");
 include_once ("includes/handlers/register-handler.php");
@@ -36,22 +33,22 @@ function outputError($account,$Field,$Msg)
 </head>
 <body>
 <?php
-if(isset($_POST['registerButton'])){
-    echo '<script>
+    if(isset($_POST['registerButton'])){
+        echo '<script>
                 $(document).ready(function() {
 					$("#loginForm").hide();
 					$("#registerForm").show();
               });
             </script>';
-}
-else{
-    echo '<script>
+    }
+    else{
+         echo '<script>
                 $(document).ready(function () {
                 $("#loginForm").show();
                 $("#registerForm").hide();
               });
             </script>';
-}
+    }
 ?>
 <div id="background">
 <div class="loginContainer">
@@ -178,7 +175,7 @@ else{
                     Create your perfect music vibe with our custom playlist feature! Handpick your
                     favorite songs and curate your own personalized music library with ease.
                 </p>
-
+            
 
                 <h2>© Groovy 2023</h2>
             </div>

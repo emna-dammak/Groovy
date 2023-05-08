@@ -1,8 +1,7 @@
 <?php
-//include("includes/includedFiles.php");
-include("includes/header.php");
+include("includes/includedFiles.php");
 $playlistRepo=new playlistRepository();
-$userLoggedIn=new User('rami2707');
+$userLoggedIn=new User($username);
 ?>
 
 <div class="playlistsContainer">
@@ -18,18 +17,14 @@ $userLoggedIn=new User('rami2707');
     <div class="gridViewContainer">
 
         <div class="gridViewItems">
-            <div class='gridViewItem2' role='link' tabindex='0'>
             <img src='assets/icons/playlist.svg' alt='playlist' onclick="createPlaylist()">
-             </div>
+        </div>
 
 
 
         <?php
         $username = $userLoggedIn->getUsername();
         $playlists=$playlistRepo->findAllByUsername($username);
-
-
-
 
         if(empty($playlists)) {
             echo "<span class='noResults'>You don't have any playlists yet.</span>";
@@ -38,12 +33,11 @@ $userLoggedIn=new User('rami2707');
         foreach($playlists as $row) {
 
             $playlist = new Playlist($row);
-
-            echo "<div class='gridViewItem2' role='link' tabindex='0' 
-							onclick='openPage(\"playlist.php?id=" . $playlist->getId() . "\")'>
+            echo "<div class='gridViewItem' role='link' tabindex='0' 
+            onclick='openPage(\"playlist.php?id=".$playlist->getId()."\")'>
 
 						<div class='playlistImage'>
-							<img src='assets/icons/cover.svg'>
+							<img src='assets/images/icons/playlist.png'>
 						</div>
 						
 						<div class='gridViewInfo'>"
@@ -56,9 +50,7 @@ $userLoggedIn=new User('rami2707');
 
         }
         ?>
-        </div>
     </div>
 </div>
 
 
-<?php include("includes/footer.php");?>
