@@ -56,12 +56,13 @@ class userRepository
      * @param $id
      * @param $params
      */
-    public function update($column, $value, $id)
+    public function update($column, $value, $username)
     {
-        $request = "UPDATE users SET $column=? WHERE id=?";
+        $request = "UPDATE users SET $column= ? WHERE username=? ";
         $reponse = $this->db->prepare($request);
-        $reponse->execute([$value, $id]);
+        $reponse->execute([$value,$username]);
     }
+
 
     /**
      * @param $id
@@ -72,6 +73,21 @@ class userRepository
         $reponse=$this->db->prepare($request);
         $reponse->execute([$id]);
     }
+    public function findByUsername($username)
+    {
+        $request="Select * from users where username= ?";
+        $response=$this->db->prepare($request);
+        $response->execute([$username]);
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+    public function findByEmail($email,$username)
+    {
+        $request="Select * from users where email=? AND username!='$username'";
+        $response=$this->db->prepare($request);
+        $response->execute([$email]);
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+
 
 }
 

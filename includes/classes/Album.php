@@ -53,5 +53,9 @@ class Album {
             }
         return $array;
     }
+    public function getId()
+    {
+        return $this->id;
+    }
 }
 ?>

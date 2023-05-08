@@ -1,7 +1,7 @@
 <div id="navBarContainer">
     <div class="titreNavBar">
-        <div class="titre">
-            <img class="logo" src="assets/icons/logo.svg">
+        <div class="titre" onclick="openPage('browse.php')">
+            <img class="logo" src="assets/icons/logo.svg" >
             <div class="roovy">ROOVY</div>
         </div>
     </div>
@@ -36,11 +36,11 @@
                 <span class="grandText">Settings</span>
             </div>
             <div class="settingsTools">
-                <div class="username">
+                <div class="username" onclick="openPage('updateDetails.php')">
                     <img src="assets/icons/username.svg" alt="" class="icon">
                     <div class="text">Username</div>
                 </div>
-                <div class="logout">
+                <div class="logout" onclick="openPage('settings.php')">
                     <img src="assets/icons/logout.svg" alt="" class="icon">
                     <div class="text">Logout</div>
                 </div>
