@@ -3,7 +3,7 @@ include_once("config.php");
 include_once("isAuthentificated.php");
 //session_destroy(); LOGOUT
 $con=ConnexionBD::getInstance();
-?>
+
 
 if(isset($_SESSION['userLoggedIn'])) {
 	$userLoggedIn = $_SESSION['userLoggedIn'];
