@@ -1,4 +1,5 @@
 <?php
+
 class ConnexionBD
 {
     private static $_dbname = "groovy";
@@ -28,3 +29,5 @@ class ConnexionBD
         return (self::$_bdd);
     }
 }
+
+?>

@@ -1,3 +1,4 @@
+
 <?php
 include "includes/includedFiles.php";
 $artistRepo=new ArtistRepository();
@@ -16,8 +17,11 @@ $artist=$album->getArtist();
 <div class="square">
          <div class="col1">
             <div class="leftSection">
-
+                <img src='assets/icons/Glogo.svg' id='Glogo'>
                 <img src='<?=$album->getArtworkPath()?>' alt='Example image'>
+                <button class="player">
+                    <img src='assets/icons/play.svg' class='play-b'>
+                </button>
 
             </div>
             <div class="rightSection">
@@ -25,7 +29,7 @@ $artist=$album->getArtist();
                 <h2><?=$album->getTitle()?></h2>
 
                 <h1>By </h1>
-                <h0><?=$artist->getName();?></h0>
+                <h0 onclick="openPage('artist.php?id=<?=$artist->getId()?>')"><?=$artist->getName();?></h0>
 
             </div>
             <hr>

@@ -11,7 +11,8 @@
 
 	</div>
                 <script src="assets/js/navBar.js"></script>
+				<script src="assets/js/script.js"></script>
 
-</body>
+				</body>
 
 </html>

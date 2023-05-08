@@ -130,12 +130,15 @@ function outputError($account,$Field,$Msg)
                 <?php outputError($account,"passwordField2","Your passwords don't match");?>
 
             </p>
+
             <button type="submit" name="registerButton">SIGN UP</button>
             <hr>
             <div class="hasAccountText">
                 <span id="hideRegister"> Already have an account? Log in here.</span>
             </div>
         </form>
+
+
     </div>
 
 </div>

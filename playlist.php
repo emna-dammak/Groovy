@@ -27,8 +27,8 @@ $owner=new User($playlist->getOwner());
             <h2><?=$playlist->getName()?></h2>
 
             <h1>By </h1>
-            <h1><?=$playlist->getOwner();?></h1>
-            <button class="button" onclick="deletePlaylist('<?php echo $playlistId; ?>')" >DELETE PLAYLIST</button>
+            <h0><?=$playlist->getOwner();?></h0>
+            <button class="buttonDelete" onclick="deletePlaylist('<?php echo $playlistId; ?>')" >DELETE PLAYLIST</button>
         </div>
         <hr>
         <div class="bottomSection">
