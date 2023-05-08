@@ -1007,9 +1007,9 @@ input:focus, input:active{
 .AlbumtracklistContainer{
     margin-top: 35PX;
 }
-.more{
+.more {
     width: 15%;
-
+}
 .artistRow{
     display: flex;
     flex-direction: row;
