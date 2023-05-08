@@ -1,7 +1,8 @@
 <?php
+
 class ConnexionBD
 {
-    private static $_dbname = "groovy";
+    private static $_dbname = "groovybd";
     private static $_user = "root";
     private static $_pwd = "";
     private static $_host = "localhost";
@@ -28,3 +29,5 @@ class ConnexionBD
         return (self::$_bdd);
     }
 }
+
+?>

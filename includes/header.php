@@ -1,10 +1,20 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="assets/js/script.js?v4"></script>
+
 <?php
-include("includes/config.php");
-//include_once("includes/isAuthentificated.php");
+include_once("config.php");
+include_once("isAuthentificated.php");
 //session_destroy(); LOGOUT
 $con=ConnexionBD::getInstance();
-?>
 
+if(isset($_SESSION['userLoggedIn'])) {
+	$userLoggedIn = $_SESSION['userLoggedIn'];
+	echo "<script>userLoggedIn = '$userLoggedIn';</script>";
+}
+else {
+	header("Location: register.php");
+}
+?>
 
 <html>
 <head>
@@ -13,7 +23,11 @@ $con=ConnexionBD::getInstance();
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     </style>
-   <link rel='stylesheet' type='text/css' href='assets/css/album.css'>
+   <link rel='stylesheet' type='text/css' href='assets/css/album.css?v4'>
+   <link rel='stylesheet' type='text/css' href='assets/css/artist.css'>
+
+
+
 
 
 </head>
