@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/header.php';
+include_once("includes/includedFiles.php");
 $con = ConnexionBD::getInstance();
 $artistRepo = new ArtistRepository();
 if (isset($_GET['term'])) {
@@ -102,7 +102,7 @@ if (isset($_GET['term'])) {
                         No album found matching " . $term . " ..</div>";
             } else {
                 foreach ($albums as $album) {
-                    echo "<div class='gridViewItem ' onclick='openPage(\"album.php?id=" . $album->getId() . "\")'>
+                    echo "<div class='gridViewItem ' onclick='openPage(\"album.php?id=" . $album->id. "\")'>
                 <div class='imageContent'>
                 <img src='assets/icons/Glogo.svg' id='Glogo'>
                 <img src='" . $album->artworkPath ."' id='AlbumImg'></div>
@@ -135,7 +135,4 @@ if (isset($_GET['term'])) {
         })
     })
 </script>
-<?php
-include_once 'includes/footer.php'
-?>
 
