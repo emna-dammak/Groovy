@@ -44,7 +44,7 @@ class Album {
     public function getSongIds()
     {
         $array=array();
-        $query="Select * from songs where album=$this->id ORDER BY albumOrder DESC";
+        $query="Select * from songs where album=$this->id ORDER BY albumOrder ";
         $resp=$this->con->query($query);
         $songIds=$resp->fetchAll(PDO::FETCH_OBJ);
         foreach($songIds as $Song)
