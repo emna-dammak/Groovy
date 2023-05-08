@@ -1,6 +1,6 @@
 <div id="navBarContainer">
     <div class="titreNavBar">
-        <div class="titre">
+        <div class="titre" onclick="openPage('index.php')">
             <img class="logo" src="assets/icons/logo.svg">
             <div class="roovy" onclick="openPage('index.php')">ROOVY</div>
         </div>
@@ -9,7 +9,7 @@
         <div class="groupMenu">
             <span class="grandText">Menu</span>
             <div class="menuTools">
-                <div class="browse">
+                <div class="browse" onclick="openPage('browse.php')">
                     <img src="assets/icons/browse.svg" alt="" class="icon">
                     <span class="text">Browse</span>
                 </div>
@@ -21,14 +21,6 @@
                     <img src="assets/icons/library.svg" alt="" class="icon">
                     <span class="text">Library</span>
                 </div>
-            </div>
-        </div>
-        <div class="groupPlaylist">
-            <div class="playlist">
-                <span class="grandText">Playlist</span>
-            </div>
-            <div class="createYourPlaylist">
-                <span class="text">Create your playlist...</span>
             </div>
         </div>
         <div class="groupSettings">

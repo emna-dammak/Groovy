@@ -7,21 +7,15 @@
 
 }
 
-.square .leftSection img {
-    height: 180px;
-    width: 180px;
-    max-width: 100%;
-    border-radius: 10px;
-    position: relative;
-    margin-top: 10px;
-    margin-left: 30px;
-
-}
-.square .leftSection img:hover {
-
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
+ .square .leftSection img {
+        height: 200px;
+        width: 200px;
+        max-width: 100%;
+        border-radius: 10px;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
 
 .square .rightSection {
     width: 70%;
@@ -31,10 +25,10 @@
 }
 
 .square .rightSection h2 {
-    font-family: 'Calibri light';
-    font-size: 120%;
+    font-family: 'Poppins';
+    font-size: 140%;
     color: #5952a0;
-    margin-top: 0px;
+    margin-top: 10px;
     position: absolute;
     top: 40%;
     left: 3.5%;
@@ -43,20 +37,23 @@
 .square .rightSection h1 {
     font-family: 'calibri light';
     color: #8C9DBE;
-    margin-top: 0px;
+    margin-top: 20px;
     position: absolute;
     top: 45%;
     left: 3.5%;
-    font-size: 100%;
+    font-size: 110%;
 }
 
 .square .rightSection h0 {
-    font-family: 'calibri light';
-    color: #262252;
-    margin-top: 0px;
+    font-family: 'CALIBRI LIGHT';
+    color: #46417b;
+    margin-top: 20px;
     position: absolute;
     top: 45%;
     left: 6.2%;
+    font-weight: bold;
+    font-size: 18px;
+
 }
 
 .square .rightSection p {
@@ -231,6 +228,7 @@ hr {
     line-height: 116.5139%;
 }
 
+
 .optionsMenu
 {
     background-color:#E0E7F4;
@@ -273,4 +271,103 @@ hr {
 {
     position:absolute;
 }
+
+.player {
+
+    border-radius: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 95%;
+    top: 81%;
+    background: #3A4F7A;
+    border: 3px solid #3A4F7A;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    }
+
+.play-b{
+    top: -203%;
+    left: -85%;
+}
+
+.top{
+    display: flex;
+    margin-top: 70px;
+    width: 96%;
+    }
+
+    .AlbumtracklistContainer{
+        margin-top: 35PX;
+        width:98.85%;
+    }
+
+    .more{
+        width: 15%;
+    }
+
+    .columnn1 {
+        width: 30%;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #505050;
+    }
+
+    .columnn2 {
+        width: 100%;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: LEFT;
+        color: #505050;
+    }
+
+    .columnn3 {
+        width: 45%;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: LEFT;
+        color: #505050;
+    }
+
+    .columnn4{
+        width: 34%;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #505050;
+    }
+    
+    .tracklistRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+        margin-bottom: 15px;
+    }
+
+    .tracklistRow:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+        background: rgba(0, 0, 0, 0.03);
+
+    }
+
+
+
 

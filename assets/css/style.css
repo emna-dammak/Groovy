@@ -23,7 +23,7 @@ html, body {
 
     position: absolute;
     width: 21.944%;
-    height: 100%;
+    height: 89vh;
     left: 0;
     top: 0;
 
@@ -123,6 +123,7 @@ html, body {
     flex: none;
     order: 2;
     flex-grow: 0;
+    display: flex;
 }
 .groupMenu .menu {
     position: absolute;
@@ -214,16 +215,14 @@ html, body {
     cursor:pointer ;
 }
 
-.groupMenu .menuTools .browse ,
-.groupMenu .menuTools .search,
-.groupMenu .menuTools .library{
+.browse, .search, .library, .username, .logout{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     /*padding: 10px 163px 10px 15px;*/
 
-    gap: 7.04225%;
-
+    gap: 15px;
+    padding: 10px 15px;
     width: 100%;
     height: 30.98%;
 
@@ -255,8 +254,8 @@ html, body {
     flex-grow: 0;*/
 }
 .icon{
-    width: 8.7912%;
-    height: 54.54545%;
+    width: 24px;
+    height: 24px;
 
 
     /* Inside auto layout
@@ -264,27 +263,12 @@ html, body {
     order: 0;
     flex-grow: 0;*/
 }
-.groupPlaylist .playlist {
-    position: absolute;
-    width: 39.12454%;
-    height: 7.7075%;
-    left: 0;
-    top: 49.69%;
-}
-.groupPlaylist .createYourPlaylist {
-    position: absolute;
-    width: 100%;
-    height: 6.67985%;
-    left: 5.8608%;
-    top: 58.97245%;
-
-}
 .settings {
     position: absolute;
     width: 43.036%;
     height: 8.707%;
-    left: 0;
-    top: 69.58908%;
+    padding: 33PX 0px;
+
 }
 .settingsTools {
     display: flex;
@@ -295,34 +279,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 23.89332%;
-    left: 6.2271%;
-    top: 79.8657%;
-}
-.username {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    /*padding: 10px 138px 10px 15px;*/
-    gap: 7.04225%;
-
-    width: 100%;
-    height: 47.3118%;
-
-    border-radius: 5px;
-}
-.logout {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    /*padding: 10px 167px 10px 15px;*/
-    gap: 7.04225%;
-
-    width: 100%;
-    height: 47.3118%;
-
-    border-radius: 5px;
-}
-
+    padding: 80px 0px;}
 
 #nowPlayingBarContainer {
     width: 100%;
@@ -632,7 +589,6 @@ html, body {
 {   position:relative;
     display:inline-block;
     width:28%;
-    height:28%;
     aspect-ratio: 1/1; /* set the aspect ratio of the container */
     overflow: hidden;
     margin-left: 3%;
@@ -837,6 +793,7 @@ html, body {
 }
 
 
+
 .buttonItems .button {
     display: block;
     margin: 0 auto 20px auto;
@@ -941,6 +898,86 @@ html, body {
     background-color:#3A4F7A ;
     color: #FFFFFF;
 }
+
+.searchContainer{
+    padding: 50px 100px;
+    overflow: auto;
+    width: 100%;
+}
+.searchContainer::-webkit-scrollbar {
+    width: 0px;
+}
+.inputWrapper {
+    border: 1px solid rgba(58, 79, 122, 1);
+
+    box-sizing: border-box;
+    width: 50vw;
+    height: 7vh;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background: #FFFFFF;
+    border: 1px solid #3A4F7A;
+    border-radius: 15px;
+}
+.searchInput{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+input:focus, input:active{
+    outline: 0;
+
+}
+
+.searchInput::placeholder{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 36px;
+
+
+    color: rgba(58, 79, 122, 0.51);
+}
+.searchIcon{
+    width: 11%;
+    background: #586175;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchStatus{
+    height: 45%;
+    width: 45%;
+}
+.tracklistContainerVide {
+    height: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.defaultSearch img{
+    margin: auto;
+    display: block;
+}
+.defaultSearch p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 80%;
+    color: #586175;
+    display: block;
+    margin: 20px auto;
+}
+
+
 .tracklistRow{
     display: flex;
     flex-direction: row;
@@ -958,6 +995,7 @@ html, body {
     background: rgba(0, 0, 0, 0.03);
 
 }
+
 .top {
     display: flex;
     margin-top: 80px;
@@ -971,6 +1009,61 @@ html, body {
 }
 .more{
     width: 15%;
+
+.artistRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 5px;
+
+}
+.artistRow:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0.03);
+}
+.artistButton{
+    opacity: 0;
+    display: flex;
+
+    padding-right: 10PX;
+}
+.artistRow:hover .artistButton{
+    opacity: 1;
+}
+.artistButton:hover{
+    cursor: pointer;
+    transform: translateX(10px);
+    transition: transform 0.2s ease-out;
+}
+.artistButton div{
+    width: 99%;
+    height: 24px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #505050;
+}
+
+h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    color: #586175;
+
 }
 .columnn1{
     width: 10%;
@@ -1013,6 +1106,7 @@ html, body {
     text-align: center;
     color: #505050;
 }
+
 .tracklistRow{
     display: flex;
     flex-direction: row;
@@ -1077,3 +1171,37 @@ html, body {
     line-height: 140%;
     color: #505050;
 }
+
+.noResults{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    width: 80%;
+    color: #586175;
+
+}
+.artistName {
+    width: 65%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #505050;
+    margin-left: 10px;
+}
+.top{
+    display: flex;
+    margin-top: 80px;
+}
+.AlbumtracklistContainer{
+    margin-top: 35PX;
+}
+.more{
+    width: 15%;
+}
+
+
