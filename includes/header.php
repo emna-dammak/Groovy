@@ -14,6 +14,8 @@ $con=ConnexionBD::getInstance();
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     </style>
    <link rel='stylesheet' type='text/css' href='assets/css/album.css'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="assets/js/script.js"></script>
 
 
 </head>
