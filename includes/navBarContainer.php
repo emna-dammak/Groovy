@@ -2,7 +2,7 @@
     <div class="titreNavBar">
         <div class="titre" onclick="openPage('index.php')">
             <img class="logo" src="assets/icons/logo.svg">
-            <div class="roovy">ROOVY</div>
+            <div class="roovy" onclick="openPage('index.php')">ROOVY</div>
         </div>
     </div>
     <div class="contenuNavBar">

@@ -190,7 +190,6 @@ hr {
     top: 45%;
     width: 97%;
 }
-
 .bottomSection {
     position: relative;
     display: flex;
@@ -223,16 +222,54 @@ hr {
     color: #262252;
 }
 
-.contenu tr:hover
-{
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
-
 .bold {
     font-family:'calibri';
     font-weight: 700;
     line-height: 116.5139%;
+}
+
+
+.optionsMenu
+{
+    background-color:#E0E7F4;
+    width:150px;
+    border:1px solid #3A4F7A;
+    border-radius: 8px;
+    z-index:1000;
+    position:fixed;
+    display:none;
+}
+.optionsMenu .item
+{
+    width: 100%;
+    padding:12px 20px;
+    box-sizing: border-box;
+    cursor:pointer;
+    height:40px;
+
+}
+
+.optionsMenu .item:hover
+{
+    background:#8C9DBE;
+    color:white;
+    border-color:#8C9DBE;
+    box-sizing: border-box;
+
+}
+.optionsMenu .item:first-of-type:hover
+{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.optionsMenu .item:last-of-type:hover
+{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.showOptionsMenu
+{
+    position:absolute;
 }
 
 .player {
@@ -330,6 +367,7 @@ hr {
         background: rgba(0, 0, 0, 0.03);
 
     }
+
 
 
 

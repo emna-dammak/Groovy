@@ -10,6 +10,7 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])) // if the request is an ajax reques
         echo "failed";
         exit();
     }
+
     include_once("config.php");
     include_once("isAuthentificated.php");
     include_once("autoload.php");

@@ -1,4 +1,5 @@
 <?php
+
 include_once("config.php");
 include_once("isAuthentificated.php");
 //session_destroy(); LOGOUT
@@ -17,7 +18,8 @@ else {
 <html>
 <head>
 	<title>Groovy</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v4">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css?v4">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     </style>
