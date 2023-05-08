@@ -2,7 +2,6 @@
 <?php
 $name='album';
 include("includes/header.php");
-include("includes/config.php");
 include_once("includes/autoload.php");
 $artistRepo=new ArtistRepository();
 $albumRepo=new AlbumRepository();
@@ -38,6 +37,7 @@ $artist=$album->getArtist();
                 <p class="bottomLeft bold"><?=$album->getNumberOfSongs()?></p>
                 <p class="bottomRight"><span class="bold">45</span><span>min</span></p>
             </div>
+             <br>
             <div class="bottomSection1">
 
                 <p class="bottomLeft">Songs</p>
@@ -45,15 +45,13 @@ $artist=$album->getArtist();
             </div>
 		</div>
 		<div class="col2">
-            <table>
-
-                <tr>
-                    <td class="column1">#</td>
-                    <td class="column2 first2">Title</td>
-                    <td class="column3 first3">Duration</td>
-                </tr>
-            </table>
-            <table class='contenu'>
+            <div class="top">
+                    <div class="columnn1">#</div>
+                    <div class="columnn2 ">Title</div>
+                    <div class="columnn3" ">Duration</div>
+                    <div class="more"></div>
+            </div>
+            <div class='AlbumtracklistContainer'>
                 <?php
                 $i=1;
                 $songIdArray=$album->getSongIds();
@@ -62,15 +60,16 @@ $artist=$album->getArtist();
                     $song=new Song($songId);
                     $artistSong=$song->getArtist();
                 echo "
-                <tr>
-                    <td class='column1 color'>".$i."</td>
-                    <td class='column2 color'>".$song->getTitle()."</td>
-                    <td class='column3 color'>".$song->getDuration()."</td> 
-                </tr>
-                
+               <div class='tracklistRow'>
+                        <div class='columnn1'>" . $i . "</div>
+                        <div class='columnn2'>" . $song->getTitle() . "</div>
+                        <div class='columnn3'>" . $song->getDuration() . "</div>
+                        <div class='more'><img  src='assets/icons/more.svg' alt=''></div>
+                    </div>
+
                  ";
                 $i+=1;} ?>
-                 </table>
+                 </div>
 
 		</div>
     </div>

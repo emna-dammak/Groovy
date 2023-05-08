@@ -23,14 +23,6 @@
                 </div>
             </div>
         </div>
-        <div class="groupPlaylist">
-            <div class="playlist">
-                <span class="grandText">Playlist</span>
-            </div>
-            <div class="createYourPlaylist">
-                <span class="text">Create your playlist...</span>
-            </div>
-        </div>
         <div class="groupSettings">
             <div class="settings">
                 <span class="grandText">Settings</span>

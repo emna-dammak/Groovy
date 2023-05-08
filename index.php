@@ -1,5 +1,4 @@
 <?php include("includes/header.php");
-include_once ("includes/config.php");
 $artistRepo=new ArtistRepository();
     ?>
     <div class="browsingPageContainer">

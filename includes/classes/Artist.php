@@ -22,9 +22,17 @@ class Artist
 
     public function getName()
     {
-        $artist=$this->artistRepo->findById($this->id);
-        return $artist->name;
+        $name=$this->artistRepo->getName($this->id);
+        return $name;
     }
+    public function getId()
+    {
+        return $this->id;
+    }
+public function getSongIds()
+{
+    $songIdArray=$this->artistRepo->getSongIds();
+    return $songIdArray;
 
-
+}
 }
