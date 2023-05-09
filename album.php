@@ -32,7 +32,7 @@ $artist=$album->getArtist();
                 <h0 onclick="openPage('artist.php?id=<?=$artist->getId()?>')"><?=$artist->getName();?></h0>
 
             </div>
-            <hr>
+            <hr class="divider">
             <div class="bottomSection">
 
                 <p class="bottomLeft bold"><?=$album->getNumberOfSongs()?></p>

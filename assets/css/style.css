@@ -414,9 +414,11 @@ html, body {
 }
 #nowPlayingLeft .trackInfo .trackName {
     margin: 6px 0;
-    display: inline-block;
+    display: block;
     width: 100%;
-
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-family: 'Poppins',sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -625,7 +627,11 @@ html, body {
 }
 
 .gridViewInfo .albumName
-{   position:relative;
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position:relative;
     left:10%;
     font-family: 'Poppins';
     font-style: normal;
@@ -1204,5 +1210,7 @@ h2{
 .more{
     width: 15%;
 }
-
+hr{
+    margin
+}
 
