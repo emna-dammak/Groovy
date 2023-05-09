@@ -54,7 +54,7 @@ $artist=new Artist($artistId);
                     $song=new Song($songId);
                     $artistSong=$song->getArtist();
                 echo "
-               <div class='tracklistRow '>
+               <div class='tracklistRow '  onclick='setTrack(".$song->getId().",tempPlaylist, true)'>
                         <div class='columnn1'>" . $i . "</div>
                         <div class='columnn2'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getDuration() . "</div>
@@ -64,6 +64,10 @@ $artist=new Artist($artistId);
                  ";
                 $i+=1;} ?>
         </div>
+            <script>
+                var tempSongIds='<?php echo json_encode($songIdArray);?>';
+                tempPlaylist=JSON.parse(tempSongIds);
+            </script>
 
         <div class="AlbumList">
             <div class="Albums">

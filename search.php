@@ -47,7 +47,7 @@ if (isset($_GET['term'])) {
                 $songArtist = $song->getArtist();
 
                 echo "
-                    <div class='tracklistRow'>
+                    <div class='tracklistRow'  onclick='setTrack(".$song->getId().",tempPlaylist, true)'>
                         <div class='columnn1'>" . $i . "</div>
                         <div class='columnn2'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getArtist()->getName() . "</div>

@@ -135,6 +135,7 @@ var mouseDown=false;
 var currentIndex=0;
 var repeat=false;
 var shuffle=false;
+var tempPlaylist=[];
 function formatTime(seconds) {
     var time = Math.round(seconds);
     var minutes = Math.floor(time / 60); //Rounds down
