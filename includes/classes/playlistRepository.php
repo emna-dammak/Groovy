@@ -27,7 +27,7 @@ class playlistRepository
     }
     public function findNumberOfSongs($id)
     {
-        $playlistsQuery = "SELECT count(*) FROM playlists WHERE id=?";
+        $playlistsQuery = "SELECT count(*) FROM playlistsongs WHERE playlistid=?";
         $playlistResponse=$this->con->prepare($playlistsQuery);
         $playlistResponse->execute([$id]);
         return $playlistResponse->fetch(PDO::FETCH_COLUMN);

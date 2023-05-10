@@ -3,7 +3,7 @@ include("../../config.php");
 if(isset($_POST['playlistId'])&&isset($_POST['songId'])) {
     $playlistId = $_POST['playlistId'];
     $songId = $_POST['songId'];
-    $orderIdQuery ="SELECT max(playlistOrder) FROM playlistSongs WHERE playlistid= ? ";
+    $orderIdQuery ="SELECT max(playlistOrder)+1 FROM playlistSongs WHERE playlistid= ? ";
     $orderIdResp=$con->prepare($orderIdQuery);
     $orderIdResp->execute([$playlistId]);
     $order=$orderIdResp->fetch(PDO::FETCH_COLUMN);

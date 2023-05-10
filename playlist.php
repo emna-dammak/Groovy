@@ -34,6 +34,7 @@ $owner=new User($playlist->getOwner());
         <div class="bottomSection">
 
             <p class="bottomLeft bold"><?=$playlist->getNumberOfSongs()?></p>
+
             <p class="bottomRight"><span class="bold">45</span><span>min</span></p>
         </div>
         <br>
