@@ -66,12 +66,12 @@ html, body {
     width: 32.27848%;
     height: 34.5139%;
     left: 39.4778%;
-    top: 32.747%;
+    top: 36.347%;
 
     font-family: 'Mortend' , sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 125%;
+    font-weight: 900;
+    font-size: 170%;
     line-height: 116.5139%;
     /* identical to box height */
 
@@ -498,14 +498,16 @@ html, body {
     position:absolute;
 }
 .subscriptionContainer
-{   width:94%;
-    background:url("../images/Subscription.png");
+{background:url("../images/Subscription.png");
     background-size: cover;
     top:1%;
     position:absolute;
     display:flex;
     height: 25%;
     left:2%;
+    width: 70%;
+    font-weight: 900;
+
     border:1px solid;
     border-radius: 20px;
 }
@@ -516,7 +518,7 @@ html, body {
     font-size: 32px;
     Line-height: 100%;
     color:white;
-    width:70%;
+    width:60%;
     display:flex;
     position:absolute;
     left:5%;
@@ -525,7 +527,7 @@ html, body {
 
 .subscriptionLink  {
     display: flex;
-    top:110%;
+    top:130%;
     position:absolute;
     left:45%;
     font-family: 'Poppins';

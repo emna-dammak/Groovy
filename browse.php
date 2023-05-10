@@ -6,8 +6,9 @@ $artistRepo=new ArtistRepository();
 <div class="browsingPageContainer">
     <div class="subscriptionContainer">
         <div class="subscriptionContent">
-            <span class="subscriptionText">Subscribe to Groovy Premium for a tailored music playing</span>
-            <span class="subscriptionLink"><a href="">click here.</a> </span>
+            <div class="subscriptionText">Subscribe to Groovy Premium for a tailored music playing experience</div>
+            <br>
+            <div class="subscriptionLink"><a href="">click here.</a> </div>
         </div>
     </div>
     <div class="BrowseContainer ">
