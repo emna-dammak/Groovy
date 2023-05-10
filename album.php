@@ -18,10 +18,8 @@ $artist=$album->getArtist();
          <div class="col1">
             <div class="leftSection">
                 <img src='assets/icons/Glogo.svg' id='Glogo'>
-                <img src='<?=$album->getArtworkPath()?>' alt='Example image'>
-                <button class="player">
-                    <img src='assets/icons/play.svg' class='play-b'>
-                </button>
+                <img src='<?=$album->getArtworkPath()?>' alt='Example image' class="image">
+
 
             </div>
             <div class="rightSection">
@@ -38,6 +36,7 @@ $artist=$album->getArtist();
                 <p class="bottomLeft bold"><?=$album->getNumberOfSongs()?></p>
                 <p class="bottomRight"><span class="bold">45</span><span>min</span></p>
             </div>
+             <br>
             <div class="bottomSection1">
 
                 <p class="bottomLeft">Songs</p>
@@ -61,13 +60,13 @@ $artist=$album->getArtist();
             $song=new Song($songId);
             $artistSong=$song->getArtist();
             echo "
-               <div class='tracklistRow' onclick='setTrack(".$song->getId().",tempPlaylist, true)' >
+               <div class='tracklistRow'  >
                         <div class='columnn1'>" . $i . "</div>
-                        <div class='columnn2'>" . $song->getTitle() . "</div>
+                        <div class='columnn2' onclick='setTrack(".$song->getId().",tempPlaylist, true)'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getDuration() . "</div>
 
                         <div class='more'>
-                         <input type='hidden' class='songId' value='".$album->getId()."'>
+                         <input type='hidden' class='songId' value='".$song->getId()."'>
                         <img  src='assets/icons/more.svg' alt='' class='moreImg' onclick='showOptionsMenu(this)'></div>
                     </div>
 

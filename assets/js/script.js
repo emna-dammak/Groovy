@@ -106,7 +106,9 @@ function updatePassword(oldPasswordClass,newPasswordClass1,newPasswordClass2)
 $(document).on("change","select.Playlist",function()
 {   var select=$(this);
     var playlistId=select.val();
+    console.log(playlistId);
      var songId=select.prev(".songId").val();
+     console.log(songId);
      $.post("includes/handlers/ajax/addToPlaylist.php",{playlistId:playlistId,songId:songId}).done
      (function()
          {

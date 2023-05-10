@@ -13,7 +13,7 @@ $con=ConnexionBD::getInstance();
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     </style>
-   <link rel='stylesheet' type='text/css' href='assets/css/album.css?v1'>
+   <link rel='stylesheet' type='text/css' href='assets/css/album.css?v2'>
     <link rel='stylesheet' type='text/css' href='assets/css/artist.css?v1'>
     <link rel='stylesheet' type="text/css" href="assets/css/updateDetails.css">
     <link rel='stylesheet' type="text/css" href="assets/css/settings.css">

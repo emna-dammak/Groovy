@@ -47,11 +47,15 @@ if (isset($_GET['term'])) {
                 $songArtist = $song->getArtist();
 
                 echo "
-                    <div class='tracklistRow'  onclick='setTrack(".$song->getId().",tempPlaylist, true)'>
+                    <div class='tracklistRow'  >
                         <div class='columnn1'>" . $i . "</div>
-                        <div class='columnn2'>" . $song->getTitle() . "</div>
+                        <div class='columnn2' onclick='setTrack(".$song->getId().",tempPlaylist, true)'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getArtist()->getName() . "</div>
                         <div class='columnn4'>" . $song->getDuration() . "</div>
+                        <div class='more'>
+                        <input type='hidden' class='songId' value='".$song->getId()."'>
+                        <img  src='assets/icons/more.svg' class='moreImg' alt='' onclick='showOptionsMenu(this)'>
+                        </div>
                     </div>
                     ";
                 $i += 1;
@@ -121,6 +125,10 @@ if (isset($_GET['term'])) {
         tempPlaylist = JSON.parse(tempSongIds);
     </script>
 </div>
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?=Playlist::getPlaylistDropdown($con,$username);?>
+</nav>
 <script>
     $(".searchInput").focus();
     $(function () {

@@ -144,7 +144,7 @@ function outputError($account,$Field,$Msg)
 </div>
     <div class="infoContainer">
         <div class="info">
-            <div id="offline"  class="feature">
+            <div id="offline"  class="feature" style="opacity: 0">
                 <img src="assets/images/offline.svg" >
 
                 <h1>Offline Streaming</h1>
@@ -156,7 +156,7 @@ function outputError($account,$Field,$Msg)
 
                 <h2>© Groovy 2023</h2>
             </div>
-            <div id="unlimitedskips"  class="feature">
+            <div id="unlimitedskips"  class="feature" style="opacity: 0">
                 <img src="assets/images/unlimitedskips.svg" >
 
                 <h1>Unlimited Skips</h1>
@@ -167,7 +167,7 @@ function outputError($account,$Field,$Msg)
 
                 <h2>© Groovy 2023</h2>
             </div>
-            <div id="custom"  class="feature">
+            <div id="custom"  class="feature" style="opacity: 0">
                 <img src="assets/images/customplaylist.svg" >
 
                 <h1>Custom Playlist</h1>
@@ -175,7 +175,7 @@ function outputError($account,$Field,$Msg)
                     Create your perfect music vibe with our custom playlist feature! Handpick your
                     favorite songs and curate your own personalized music library with ease.
                 </p>
-            
+
 
                 <h2>© Groovy 2023</h2>
             </div>

@@ -17,8 +17,9 @@ $userLoggedIn=new User($username);
     <div class="gridViewContainer">
 
         <div class="gridViewItems">
+            <div class="gridViewItem2" role="link" tabIndex="0">
             <img src='assets/icons/playlist.svg' alt='playlist' onclick="createPlaylist()">
-        </div>
+            </div>
 
 
 
@@ -33,13 +34,14 @@ $userLoggedIn=new User($username);
         foreach($playlists as $row) {
 
             $playlist = new Playlist($row);
-            echo "<div class='gridViewItem' role='link' tabindex='0' 
+            echo "<div class='gridViewItem2' role='link' tabindex='0'
             onclick='openPage(\"playlist.php?id=".$playlist->getId()."\")'>
 
 						<div class='playlistImage'>
-							<img src='assets/images/icons/playlist.png'>
+							<img src='assets/icons/cover2.svg'>
+							<div class='playlistName'>". $playlist->getName() ."</div>
 						</div>
-						
+
 						<div class='gridViewInfo'>"
                 . $playlist->getName() .
                 "</div>
@@ -50,6 +52,7 @@ $userLoggedIn=new User($username);
 
         }
         ?>
+        </div>
     </div>
 </div>
 

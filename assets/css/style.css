@@ -857,6 +857,7 @@ html, body {
 }
 .gridViewItems{
     margin-top: -10%;
+    margin-bottom: 5%;
 }
 .gridViewItem2 img
 {
@@ -1211,6 +1212,24 @@ h2{
     width: 15%;
 }
 hr{
-    margin
+    margin: auto;
 }
+.playlistName{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(184, 203, 242, 0.5);    padding: 10px;
+    width: 55%;
+    height: 11%;
+    text-align: center;
 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins' ,sans-serif;
+    font-style: normal;
+    font-size: 126%;
+    font-weight: 700;
+    line-height: 30px;
+    color: #FFFFFF;
+
+}

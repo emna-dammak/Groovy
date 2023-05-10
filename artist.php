@@ -24,10 +24,8 @@ $artist=new Artist($artistId);
          <div class="col1">
             <div class="leftSection">
                  <img src='assets/icons/Glogo.svg' id='Glogo'>
-                <img src='<?=$artist->getArtworkPath()?>' alt='Example image'>
-                <button class="player">
-                    <img src='assets/icons/play.svg' class='play-b'>
-                </button>
+                <img src='<?=$artist->getArtworkPath()?>' alt='Example image' class="image">
+
             </div>
             <div class="rightSection">
 
@@ -54,11 +52,14 @@ $artist=new Artist($artistId);
                     $song=new Song($songId);
                     $artistSong=$song->getArtist();
                 echo "
-               <div class='tracklistRow '  onclick='setTrack(".$song->getId().",tempPlaylist, true)'>
-                        <div class='columnn1'>" . $i . "</div>
-                        <div class='columnn2'>" . $song->getTitle() . "</div>
+               <div class='tracklistRow '  >
+                        <div class='columnn1' >" . $i . "</div>
+                        <div class='columnn2' onclick='setTrack(".$song->getId().",tempPlaylist, true)'>" . $song->getTitle() . "</div>
                         <div class='columnn3'>" . $song->getDuration() . "</div>
-                        <div class='more'><img  src='assets/icons/more.svg' alt=''></div>
+                        <div class='more'>
+                        <input type='hidden' class='songId' value='".$song->getId()."'>
+                        <img  src='assets/icons/more.svg' class='moreImg' alt='' onclick='showOptionsMenu(this)'>
+                        </div>
                 </div>
 
                  ";
@@ -100,7 +101,10 @@ $artist=new Artist($artistId);
 
 		</div>
     </div>
-
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?=Playlist::getPlaylistDropdown($con,$username);?>
+</nav>
 
 
 

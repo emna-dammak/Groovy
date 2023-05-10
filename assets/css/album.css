@@ -8,8 +8,8 @@
 }
 
  .square .leftSection img {
-        height: 200px;
-        width: 200px;
+        height: 27vh;
+        aspect-ratio: 1/1;
         max-width: 100%;
         border-radius: 10px;
         position: relative;
@@ -418,6 +418,12 @@ hr {
         width: 100%;
         Opacity: 0.2;
     }
+.image{
+    height: 27vh;
+    aspect-ratio: 1/1;
+}
+
+
 
 
 

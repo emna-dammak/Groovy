@@ -30,9 +30,9 @@
             <div class="settingsTools">
                 <div class="username" onclick="openPage('updateDetails.php')">
                     <img src="assets/icons/username.svg" alt="" class="icon">
-                    <div class="text">Username</div>
+                    <div class="text"><?=$username?> </div>
                 </div>
-                <div class="logout" onclick="openPage('settings.php')">
+                <div class="logout" onclick="logout()">
                     <img src="assets/icons/logout.svg" alt="" class="icon">
                     <div class="text">Logout</div>
                 </div>

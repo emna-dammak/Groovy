@@ -19,7 +19,7 @@ $owner=new User($playlist->getOwner());
     <div class="col1">
         <div class="leftSection">
 
-            <img src='' alt='Example image'>
+            <img src='assets/icons/cover2.svg' alt='Example image'>
 
         </div>
         <div class="rightSection">
@@ -36,6 +36,7 @@ $owner=new User($playlist->getOwner());
             <p class="bottomLeft bold"><?=$playlist->getNumberOfSongs()?></p>
             <p class="bottomRight"><span class="bold">45</span><span>min</span></p>
         </div>
+        <br>
         <div class="bottomSection1">
 
             <p class="bottomLeft">Songs</p>
@@ -63,7 +64,7 @@ $owner=new User($playlist->getOwner());
                         <div class='columnn1'>" . $i . "</div>
                         <div class='columnn2'>" . $playlistSong->getTitle() . "</div>
                         <div class='columnn3'>" . $playlistSong->getDuration() . "</div>
-                       
+
                         <div class='more'>
                          <input type='hidden' class='songId' value='".$playlistSong->getId()."'>
                         <img  src='assets/icons/more.svg' alt='' class='moreImg' onclick='showOptionsMenu(this)'></div>
