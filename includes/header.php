@@ -9,7 +9,7 @@ $con=ConnexionBD::getInstance();
 <html>
 <head>
 	<title>Groovy</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
     </style>
